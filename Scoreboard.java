@@ -1,7 +1,8 @@
 public class Scoreboard {
 
-    public Scoreboard() {
-
+    public Scoreboard(String team1, String team2) 
+    {
+        
     }
     
 }
