@@ -12,28 +12,27 @@ public class Scoreboard {
         teamTwo = two;
         activeTeam = teamOne;
     }
-    public static void recordPlay(int play) 
-    {
-
+    public void recordPlay(int play) {
         if (play == 0)
         {
-            if (activeTeam = teamOne)
-            {
+            if (teamOne.equals(activeTeam)) {
                 activeTeam = teamTwo;
             }
-            else if (activeTeam = teamTwo)
-            {
+            else {
                 activeTeam = teamOne;
             }
         }
         else
         {
-            if (activeTeam = teamOne) {
+            if (teamOne.equals(activeTeam)) {
                 teamOneScore += play;
             }
-            else if (activeTeam = teamTwo) {
-                teamtTwoScore += play;
+            else {
+                teamTwoScore += play;
             }
         }
+    }
+    public String getScore() {
+        return (teamOneScore + "-" + teamTwoScore + "-" + activeTeam);
     }
 }
